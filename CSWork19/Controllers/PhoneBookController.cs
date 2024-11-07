@@ -7,15 +7,20 @@ namespace CSWork19.Controllers
     {
         private PhoneBookContext _phoneBookContext;
 
-        public IActionResult ContactsList()
+        public PhoneBookController()
         {
             _phoneBookContext = new PhoneBookContext();
-            _phoneBookContext.GetItemSourceContacts();
+        }
+
+        public IActionResult ContactsList()
+        {
+            ViewBag.contacts = _phoneBookContext.GetItemSourceContacts();
             return View();
         }
 
-        public IActionResult ContactsInfo()
+        public IActionResult ContactsInfo(int id)
         {
+            ViewBag.contact = _phoneBookContext.GetContactByID(id);
             return View();
         }
     }

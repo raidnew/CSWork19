@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Data.Entity;
+using System.Linq;
 
 namespace CSWork19.Models
 {
@@ -14,5 +15,12 @@ namespace CSWork19.Models
             Contacts.Load();
             return Contacts.Local.ToBindingList();
         }
+
+        public Contact GetContactByID(int id)
+        {
+            Contacts.Load();
+            return Contacts.Single(c => c.Id == id);
+        }
+
     }
 }

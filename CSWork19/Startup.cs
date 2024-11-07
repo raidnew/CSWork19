@@ -23,12 +23,12 @@ namespace CSWork19
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseRouting();
-
+            app.UseStaticFiles();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=PhoneBook}/{action=COntactsList}");
+                    pattern: "{controller=PhoneBook}/{action=ContactsList}/{id?}");
             });
         }
     }

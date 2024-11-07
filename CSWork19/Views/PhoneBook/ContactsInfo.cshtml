@@ -1,7 +1,39 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using CSWork19.Models;
+<head>
+    <title>Задание SkillBox C# 19</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="~/css/style.css">
+</head>
 
-BBBBBBBBBBB
+<div class="table">
+    <div class="row">
+        <div class="cell">ID</div>
+        <div class="cell">@ViewBag.contact.Id</div>
+    </div>
+    <div class="row">
+        <div class="cell">Имя</div>
+        <div class="cell">@ViewBag.contact.FirstName</div>
+    </div>
+    <div class="row">
+        <div class="cell">Фамилия</div>
+        <div class="cell">@ViewBag.contact.LastName</div>
+    </div>
+    <div class="row">
+        <div class="cell">Отчество</div>
+        <div class="cell">@ViewBag.contact.ThirdName</div>
+    </div>
+    <div class="row">
+        <div class="cell">Телефон</div>
+        <div class="cell">@ViewBag.contact.Phone</div>
+    </div>
+    <div class="row">
+        <div class="cell">Аддресс</div>
+        <div class="cell">@ViewBag.contact.Address</div>
+    </div>
+    <div class="row">
+        <div class="cell">Дескрипшен</div>
+        <div class="cell">@ViewBag.contact.Desc</div>
+    </div>
+</div>
+
+<a href="/PhoneBook/ContactsList">Вернуться с списку</a>
